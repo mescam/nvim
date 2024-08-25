@@ -405,6 +405,7 @@ require('lazy').setup({
 
       local servers = {
         gopls = {},
+        ['nil'] = {},
         pyright = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         tsserver = {},
@@ -424,7 +425,11 @@ require('lazy').setup({
         },
       }
 
-      require('mason').setup()
+      require('mason').setup {
+        registries = {
+          'file:~/.config/nvim/mason-registry',
+        },
+      }
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
