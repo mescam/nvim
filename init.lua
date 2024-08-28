@@ -425,11 +425,11 @@ require('lazy').setup({
         },
       }
 
-      require('mason').setup {
+      require('mason').setup { {
         registries = {
-          'file:~/.config/nvim/mason-registry',
+          'github:cospectrum/mason-registry@nil-2024-08-06',
         },
-      }
+      } }
 
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
