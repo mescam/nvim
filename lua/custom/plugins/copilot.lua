@@ -34,7 +34,11 @@ return {
       { 'zbirenbaum/copilot.lua' },
       { 'nvim-lua/plenary.nvim' },
     },
+    lazy = false,
     build = 'make tiktoken',
     opts = {},
+    keys = {
+      { '<leader>tc', '<cmd>CopilotChatToggle<CR>', desc = "[C]opilot Chat" },
+    },
   },
 }
