@@ -1,6 +1,7 @@
 return {
   {
     'zbirenbaum/copilot.lua',
+    commit = '99654fe9ad6cb2500c66b178a03326f75c95f176',
     cmd = 'Copilot',
     event = 'InsertEnter',
     config = function()
@@ -16,8 +17,8 @@ return {
           hgcommit = true,
           svn = true,
           cvs = false,
-          ["."] = true,
-        }
+          ['.'] = true,
+        },
       }
     end,
   },
@@ -29,7 +30,7 @@ return {
   },
   {
     'CopilotC-Nvim/CopilotChat.nvim',
-    branch = 'canary',
+    branch = 'main',
     dependencies = {
       { 'zbirenbaum/copilot.lua' },
       { 'nvim-lua/plenary.nvim' },
@@ -38,7 +39,7 @@ return {
     build = 'make tiktoken',
     opts = {},
     keys = {
-      { '<leader>tc', '<cmd>CopilotChatToggle<CR>', desc = "[C]opilot Chat" },
+      { '<leader>tc', '<cmd>CopilotChatToggle<CR>', desc = '[C]opilot Chat' },
     },
   },
 }
